@@ -60,6 +60,6 @@ Hai ca sử dụng "Select Payment Method" và "Maintain Timecard" đều có ch
 - Database: Được dùng để lưu trữ cả thông tin phương thức thanh toán và thông tin timecard.
 
 ## Tương tác
-Login xác thực người dùng trước khi truy cập hệ thống.
-Employee tương tác với Database để lưu trữ thông tin và tích hợp hệ thống bên ngoài.
+- Login xác thực người dùng trước khi truy cập hệ thống.
+- Employee tương tác với Database để lưu trữ thông tin và tích hợp hệ thống bên ngoài.
 
