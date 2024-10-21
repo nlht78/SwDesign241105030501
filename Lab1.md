@@ -52,4 +52,10 @@ Employee có thuộc tính currentTimecard.
 TimecardManager chứa phương thức updateTimecard() để quản lý việc nhập thông tin.
 Timecard có các thuộc tính như hoursWorked, projectChargeNumber.
 
+# 5. Hợp nhất kết quả phân tích
+Hai ca sử dụng "Select Payment Method" và "Maintain Timecard" đều có chung những yêu cầu cơ bản về bảo mật (nhân viên phải đăng nhập trước khi sử dụng hệ thống), quản lý thông tin người dùng (Employee), và sự tích hợp với các hệ thống bên ngoài (hệ thống ngân hàng và hệ thống quản lý dự án).
+
+## Các lớp chung
+- Employee: Được dùng cho cả hai ca sử dụng.
+- Database: Được dùng để lưu trữ cả thông tin phương thức thanh toán và thông tin timecard.
 
