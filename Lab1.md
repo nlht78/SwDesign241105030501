@@ -24,40 +24,62 @@ Kiến trúc phù hợp cho hệ thống quản lý Payroll (bảng lương) nê
 
 # 3. Phân tích ca sử dụng Payment
 ## Các lớp phân tích
-- Employee: Đại diện cho nhân viên sử dụng hệ thống.
-- PaymentMethodSelector: Lớp chịu trách nhiệm hiển thị và quản lý việc chọn phương thức thanh toán.
-- BankSystem: Lớp giao tiếp với hệ thống ngân hàng khi chọn phương thức thanh toán qua chuyển khoản.
-- PaymentDatabase: Lớp quản lý việc lưu trữ thông tin liên quan đến phương thức thanh toán của nhân viên.
+- Employee: Đại diện cho nhân viên đang thực hiện thanh toán.
+- PaymentMethod: Lớp mô tả phương thức thanh toán của nhân viên.
+- BankSystemIntegration: Hệ thống tích hợp với ngân hàng để thực hiện thanh toán.
+- Database: Lưu trữ thông tin thanh toán.
+- Login: Lớp đảm bảo người dùng đăng nhập vào hệ thống.
 ## Sequence Diagram 
-- Employee tương tác với PaymentMethodSelector để chọn phương thức thanh toán.
-- PaymentMethodSelector xác thực thông tin, nếu chọn chuyển khoản, nó sẽ gửi yêu cầu đến BankSystem để xác nhận tài khoản.
-- Sau khi xác nhận, PaymentMethodSelector cập nhật thông tin vào PaymentDatabase.
+![Biểu đồ Sequence](https://www.planttext.com/api/plantuml/png/P591RiCW4BppYbLExI4VoA6ANFSGoLOikn_OmYf5mU02hkItzT0dzGi5RDmwER8pExCpukVh--WyMZ_sYhchr62D8uRS6mil_Q3CHCI6G91S3gWzx2fpaNe7wA3Q0WrEFMbVatyt8X6Q-evXZL8prcwn0lMrcvod_gGzNInwQMQReZjjgILwV4D72IqBnlAXi7-2wW3fmeT7Li4-33AupA4REIVdjbjDVO2E574FImoOSmIPfewCiZX0IzvA-gGR3YkBv1H5jiYw8MxisYZsCP9BVh4KU4R5HvLYiwQzitoLFN6q0b0BE5j15c8FgtTGZEz_ZhD81B8qPJEsWA7QSB8riP1yEWl3xDw5R_2NjYLkx9fstbsWH1JpwgRpJ5XC0kT8MiJVzWi00F__0m00)
 ## Một số thuộc tính và quan hệ giữa các lớp:
-- Employee có thuộc tính paymentMethod.
-- PaymentMethodSelector chứa phương thức selectPaymentMethod() để quản lý quá trình chọn.
-- BankSystem có phương thức verifyBankAccount() để xác nhận thông tin ngân hàng.
-
+- Employee:
+  - Thuộc tính: EmployeeID, Name, Position.
+  - Quan hệ: Gửi yêu cầu thanh toán và chọn phương thức thanh toán.
+- PaymentMethod:
+  - Thuộc tính: PaymentType, AccountNumber.
+  - Quan hệ: Liên kết với lớp BankSystemIntegration để thực hiện thanh toán.
+- BankSystemIntegration:
+  - Thuộc tính: TransactionID, BankName.
+  - Quan hệ: Xử lý giao dịch và lưu trữ kết quả trong Database.
+- Database:
+  - Thuộc tính: PaymentHistory, AccountBalance.
+  - Quan hệ: Lưu trữ thông tin liên quan đến thanh toán và người dùng.
+- Payroll (Tính lương):
+  - Thuộc tính: amount, payDate, payPeriod.
+  - Quan hệ: Sử dụng lớp Timecard và Order để tính toán số giờ làm việc và doanh số cho việc tính lương, liên kết với lớp PaymentMethod để thực hiện thanh toán theo phương thức đã chọn.
+## Biểu đồ lớp
+![Biểu đồ lớp](https://www.planttext.com/api/plantuml/png/R55BRi8m5Dpx55wMHQvGqK8NB0eLS867FMeZ_47FBvKYr9DrmP6u0dLmKeZO-Ssy6SqydtzFqoJ4qdYdqhuEccE2CevIqc_-u68BwAFIkXh6nRmRb-JHFJwezGZo3lcALlseehw3YqN1jktXAdqn9ZP1betVWU-a79qhectjOOZjd8GwOCKMF4mpSgPn92Ygfyc_qIk5_QPD0hy8WaycgMFeit0qIAb4kbLbwnsbllT68gEihM4Ysx_bJAmXNECRjm57r13rwZzSjAgUHtSRKxcAwW-HiOTTrEE6URzleQO8Dd_l1G00__y30000)
 # 4. Phân tích ca sử dụng Maintain Timecard
 ## Các lớp phân tích
-Employee: Đại diện cho nhân viên sử dụng hệ thống.
-Timecard: Lớp lưu trữ thông tin về thời gian làm việc.
-TimecardManager: Lớp chịu trách nhiệm quản lý việc nhập và nộp timecard.
-ProjectManagementSystem: Lớp quản lý danh sách các mã số dự án để tính toán thời gian làm việc theo dự án.
+- Employee: Quản lý thông tin nhân viên.
+- Timecard: Ghi nhận số giờ làm việc của nhân viên.
+- ProjectSystemIntegration: Lấy thông tin dự án để gán cho các bản ghi chấm công.
+- Database: Lưu trữ thông tin về timecard và dự án.
 ## Sequence Diagram 
-Employee yêu cầu TimecardManager để cập nhật timecard.
-TimecardManager lấy danh sách mã số dự án từ ProjectManagementSystem.
-Sau khi Employee nhập thông tin, TimecardManager xác nhận và lưu vào Timecard.
+![Biểu đồ sequence](https://www.planttext.com/api/plantuml/png/L951JiCm44NtFiMeArZq0bcWAWcBI5bKTJZ0O0-LeROZUuhKix7WI5m1nuq3tiwR_-V9_ldwFaJ6m5Tx4V73E0W-aa35Fi2pdI_-HYJcj62KcT4nx4P_Dcu7666imMGiAGmwiwchuJ7uTr8iRv793exf792DlnSTvL1lzyZuYf4oxLiXYWhids1i83iyF8eHzcbGu3e7ULMAOgnJKzV0owoH2OfeAfYwXQNx3Po8Ww5FWbKL1lVcWysM8ctaKqlBVxwbz5hLjmt8z7X_LqJVRj4o0uabKlbl_6wgnO6SNhxc5m00__y30000)
 ## Một số thuộc tính và quan hệ giữa các lớp:
-Employee có thuộc tính currentTimecard.
-TimecardManager chứa phương thức updateTimecard() để quản lý việc nhập thông tin.
-Timecard có các thuộc tính như hoursWorked, projectChargeNumber.
-
+- Employee:
+  - Thuộc tính: employeeID, name.
+  - Quan hệ: Liên kết với Timecard để lưu thông tin chấm công của nhân viên.
+- Timecard:
+  - Thuộc tính: timecardID, employeeID, date, hoursWorked, chargeNumber.
+  - Quan hệ: Liên kết với Employee để ghi nhận thông tin chấm công và với ProjectSystemIntegration để lấy thông tin về mã dự án.
+- ProjectSystemIntegration:
+  - Thuộc tính: projectID, chargeNumber.
+  - Quan hệ: Liên kết với Timecard để đối chiếu mã dự án hoặc mã chi phí.
+- Database:
+  - Thuộc tính: timecardRecords, projectRecords.
+  - Quan hệ: Lưu trữ thông tin chấm công và dữ liệu dự án.
+## Biểu đồ lớp
+![Biểu đồ lớp](https://www.planttext.com/api/plantuml/png/T90n3i8m34Ntd28Z3Bq2wb0akY14aPXDQr1e4oF7HQeG9sFWI5o1jgH136p-rl_VBtazdgaNO6bjetnjd6RogCe6lDTBUsceGzGtfNKIPPwDSWqMrLq5xyvOB86hu5rHotvFN6CrwWm4ns73TCPI-euO3QkYyu8sTu8d1Z7aGjKMXGrUSKgw8ytcttJV30Vm4sGXn3Z1V7pn6KcoY9mg0W_RVmY_hkcKIj5LmuUz0G00__y30000)
 # 5. Hợp nhất kết quả phân tích
 Hai ca sử dụng "Select Payment Method" và "Maintain Timecard" đều có chung những yêu cầu cơ bản về bảo mật (nhân viên phải đăng nhập trước khi sử dụng hệ thống), quản lý thông tin người dùng (Employee), và sự tích hợp với các hệ thống bên ngoài (hệ thống ngân hàng và hệ thống quản lý dự án).
 
 ## Các lớp chung
 - Employee: Được dùng cho cả hai ca sử dụng.
 - Database: Được dùng để lưu trữ cả thông tin phương thức thanh toán và thông tin timecard.
+- ProjectSystemIntegration: Lấy thông tin dự án trong ca sử dụng Maintain Timecard.
+- Login: Xác thực người dùng trước khi họ truy cập hệ thống.
 
 ## Tương tác
 - Login xác thực người dùng trước khi truy cập hệ thống.
