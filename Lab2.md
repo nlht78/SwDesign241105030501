@@ -10,7 +10,7 @@
 ## Một số thuộc tính và quan hệ giữa các lớp:
 
 ## Biểu đồ lớp
-![Biểu đồ lớp](https://www.planttext.com/api/plantuml/png/R551JiCm4Bpx5Jd28Lz0hPGKSO6AvWDBF0UBE8vsbwfHnSiuy2I-q3XsInIuxSxEx8pNFr_V6r5Y_V2TaNVN5nm4fkr8fDXQFm5dKnHbgf-gkNucZxdOWxqJSQ4NyscowXL3OCsor3JZa0IDyvX4BjYvhKXfBXxHWqcHw7VtlziYvOq4jttA3aVKVkZ22CJnH5-EeaTBRFyPlR05PtoLTnVOaoeu6wN-Rvxw5973A0gVgGbgmhxQPRyhKfzQT4cTRbcM3zdFv3D5vFh69RPAPTOf8sUPnMpGs_Y95m000F__0m00)
+![Biểu đồ lớp](https://www.planttext.com/api/plantuml/png/R551JiCm4Bpx5JdI0tq2QgMaY0kj81zOuZbOn76qkwqQ8Lx6WIVr2urZ5wB0RNTsPcUyldnzRqI9zUXR8--kApW8JDEIIB6rVWG-J57Sf_gfdEfdyfYA0zWx4HSwCPycgrxG1zOiIqqzz4bGEuzHv8ATsfAKfk8H7PWKYNwt-jqMAMya-Dcdx712vVis340SZ_JvA7eqnFQVqPujEEEBlBl0dbJ1sIZrV_DKvuYy3gBmcPgWEXpANVQx8TMvGPlKwPRhzKFsC_bC4RczSOujKfbboiYPPp4RT3P-uXK00F__0m00)
 # 2. Phân tích ca sử dụng Create Employee Report
 ## Các lớp phân tích
 - Admin: Quản lý thông tin Admin và quyền tạo báo cáo nhân viên.
@@ -22,12 +22,17 @@
 ![Squence Diagram](https://www.planttext.com/api/plantuml/png/P98zJiGm44PxdsAqLRPOqQT0IvI49WMoJs2I4R98xCYUeDspKN0ahe3_WXnevtl-_3poz-VNrP6qj2qpS-zAWpKEcHp9M7YQ5gNPwbCrgbLgWjDWtfG-WNGm78DkMMTpH-Iu6akHwFWHIL5lx2A9q4Q6ztzgRe4HTqUuf19n15f9ybKwZ67RC1ObuV88GmtHhZgp0Iv-49Cy1B6D8pfNy1sluHarMaa8kpuaIT_HyG2rJUr7P1L-552GO6qJRmarX-2Ndt87xsj8hyxjZFUxW6Stgs5VohGJXQRm_N4hEOCgqLvH53L9yLzHKCWj-NYX9yezvJZTvGkgbxP_w6uZpcTsHJs57_83003__mC0)
 ## Một số thuộc tính và quan hệ giữa các lớp:
 ## Biểu đồ lớp
-![Biểu đồ lớp](https://www.planttext.com/api/plantuml/png/R55BReD03DtFALWc2wvGKGc8kecYb0kuuCKe38Dijm95ELaMFLAk4EP3WaXszlDxzhmtj-j_nW8alwPLVD9TGfPHrIqm9v-DcO2pIf8qr5-vh_TWq1S79AEPjUrONLHK5QPlxOXunDwIH7begh4FmaeRdCJQDhxDGS0NE-oGGA9sitrk3KXfoO08KbmR-bTsCJZaUsH14wa1gkmXBoVc4Yc66jkbsZtd1nWVRnVI-8UpCJUEA-QHyrC3DN4qRGhPfUd7AW-rYiSnvdllPYlVQfs3lx1mgpBi6lUPTm000F__0m00)
+![Biểu đồ lớp](https://www.planttext.com/api/plantuml/png/R55BReD03DtFALYcYt24Y4X0rKs56YxWWXUZCWootGWKzMHTz4YzGkP7YsXtzlDxzhmttvzV1GkGl9j1yPiUCxACgXk0EJltnW4tbMN7M3-LeNu6Ww5ea8ncrdPazQ6IgZBJO1V45vmiIPB7fbscA6orGIVMjWzj2GAXUCGH2IHf3m-_MoDIMp8WWfJMnlulkvezSbbOq2HgX5hRbBLZRf5gxd3OglrpNe7nv-r26g-u6lFZj68TUJyTK9z6RbFCBizFkppKBXxFME_zDzlvLliSmeMDMrNWsFlFl0C00F__0m00)
 # 3. Phân tích ca sử dụng Login
 ## Các lớp phân tích
+- User: Đại diện cho người dùng muốn truy cập vào hệ thống. Người dùng sẽ có thuộc tính như tên người dùng và mật khẩu.
+- LoginSystem: Quản lý quá trình xác thực người dùng, kiểm tra tên người dùng và mật khẩu, và cho phép đăng nhập nếu thông tin hợp lệ.
+- Database: Lưu trữ thông tin tài khoản người dùng, bao gồm tên người dùng và mật khẩu đã mã hóa, để so sánh với dữ liệu đầu vào và xác thực.
 ## Sequence Diagram
+![Squence Diagram](https://www.planttext.com/api/plantuml/png/R951QiCm44NtEiMGVIxWHGb6MHJSKYfQo78YJrDHMJAQSKBEraMFr2jKSeoBMsiX4F_D_r_Iz-VNZWMJ39rN_E42fCYaq4fCyCAKL9z5PrsFGM3Jn9CBnYQYi05aQCoQVcMXRj8FVmYDWaTa6cLTArL2O7kNqGhsGVBX4Ji232qy8VCbfbOrvaOSCcE6O-S4nYGeRagX5tX5xzgLKSYh31O3NLVmJ98SdMcyt6s-8Bg6xHmnIpEzz2bLpNkyJ2NCO2qnJyZeKnogfVmsU4MU2Ux3-RThVkNLgYL2E-uzNc6VKiOUiWUUw7_As6J9K6ZLBc_bKty0003__mC0)
 ## Một số thuộc tính và quan hệ giữa các lớp:
 ## Biểu đồ lớp
+![Biểu đồ lớp](https://www.planttext.com/api/plantuml/png/J8zD2W8n38NtEKMNkd2E82Ew5155zt4QjDWVQ3AAY2TpuP6yWcsjChiatylBo_lvQbamIkyiyDbu5GCJT1QPrOufgZieDIdb2XsLPftWDKGD3wZAPJWQlxsnaAiBUxH6ez0yaYOl1YsFneNCUZdbIPTejatZlyy21G_8L4qs9D7GfSWo-afBhAQP3g_2C45cFoTeoUlyt0S00F__0m00)
 # 4. Phân tích ca sử dụng Maintain Employee Information
 ## Các lớp phân tích
 ## Sequence Diagram
