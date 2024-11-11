@@ -25,3 +25,45 @@ Giải Thích cho ProjectManagementDatabase
 
 - Project: Đối tượng dự án được ProjectManagementDatabase lưu trữ và truy xuất để hỗ trợ tính lương.
 
+# 2.	Analysis class to design element map
+
+| Analysis Class             | Design Element                  |
+|----------------------------|----------------------------------|
+| LoginForm                  | LoginForm                       |
+| MaintainEmployeeForm       | MainEmployeeForm                |
+| TimecardForm               | TimecardForm                    |
+| MainApplicationForm        | MainApplicationForm             |
+| TimecardController         | TimecardController              |
+| SystemClockInterface       | SystemClockInterface            |
+| PayrollController          | PayrollController               |
+| Paycheck                   | Paycheck                        |
+| Employee                   | Employee                        |
+| BankSystemInterface        | IBankSystem, BankSystem         |
+| PrintServiceInterface      | IPrintService, PrintService     |
+| ProjectManagementSystem    | IProjectManagement, ProjectManagementDatabase |
+| PayrollReportGenerator     | PayrollReportGenerator          |
+| EmployeeDatabase           | EmployeeDatabase                |
+
+
+# 3.	Design element to owning package map
+
+| Design Element        | "Owning" Package                            | 
+|-----------------------|---------------------------------------------|
+| LoginForm             | Middleware::Security::GUI Framework         |
+| MainEmployeeForm      | Applications::Employee Activities           |
+| TimecardForm          | Applications::Employee Activities           |
+| MainApplicationForm   | Middleware::Security::GUI Framework         |
+| TimecardController    | Applications::Employee Activities           |
+| SystemClockInterface  | Applications::Payroll                       |
+| PayrollController     | Applications::Payroll                       |
+| Paycheck              | Business Services::Payroll Artifacts        |
+| Employee              | Business Services::Employee Management      |
+| IBankSystem           | External Interfaces::Banking                |
+| BankSystem            | External Interfaces::Banking                |
+| IPrintService         | External Interfaces::Printing               |
+| PrintService          | External Interfaces::Printing               |
+| IProjectManagement    | External Interfaces::Project Management     |
+| ProjectManagementDatabase | External Interfaces::Project Management |
+
+4.	Architectural layers and their dependencies
+
