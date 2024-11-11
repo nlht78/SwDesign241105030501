@@ -35,25 +35,40 @@
 ![Biểu đồ lớp](https://www.planttext.com/api/plantuml/png/J8zD2W8n38NtEKMNkd2E82Ew5155zt4QjDWVQ3AAY2TpuP6yWcsjChiatylBo_lvQbamIkyiyDbu5GCJT1QPrOufgZieDIdb2XsLPftWDKGD3wZAPJWQlxsnaAiBUxH6ez0yaYOl1YsFneNCUZdbIPTejatZlyy21G_8L4qs9D7GfSWo-afBhAQP3g_2C45cFoTeoUlyt0S00F__0m00)
 # 4. Phân tích ca sử dụng Maintain Employee Information
 ## Các lớp phân tích
+- Payroll Administrator: Đại diện cho người quản trị hệ thống bảng lương, người có quyền thêm, sửa, hoặc xóa thông tin nhân viên.
+- Employee: Chứa thông tin của từng nhân viên bao gồm tên, loại nhân viên, địa chỉ, số an sinh xã hội, thuế, mức lương, và các chi tiết khác.
+- EmployeeManagementSystem: Quản lý quá trình thêm, cập nhật và xóa thông tin nhân viên.
+- Database: Lưu trữ và truy xuất thông tin của nhân viên, hỗ trợ các thao tác thêm, sửa, hoặc xóa dữ liệu nhân viên.
 ## Sequence Diagram
-![Squence Diagram]()
+![Squence Diagram](https://www.planttext.com/api/plantuml/png/p5H1JiCm4Bpx5QkUu53rtWDgYel4eI9gnGEMU8kiEdQmjqXv6mUUn1Umav0sKIlAZHmzipEpOojV7v-BmEZvK1eHzjg2Tu445kmyv5XxPqocIcrrO8_f40FacQZYY2vqXPPXiYehusgYDLfyfP8iR-l0L4uIURNU3jaI6LymK8FAfH1v1jExn9l3bWmL30y7Mx1s5cuofMRFbKAccOmO4_oOtGeq3147jFsXWFX5fIIOPtFOqDk10lSuFDgTyoKcyOPxuhsoJFuoirELotbZslCsL3Yl6efSmhHN6-9fXjGudjIXCbYVc4f19X2qA_zjC_dRGdAynuROQte_TWhfRYwlaj1-I8tjkipN53YcNjbXEwRQYhhdyFyhEabqx-nE-xBDVkO93d0QPrcZtn-TOhb3dRDvqWof8Pci4erib-gf8jzSK_IFSvGgNaHI-YLy0m00__y30000)
 
 ## Một số thuộc tính và quan hệ giữa các lớp:
 ## Biểu đồ lớp
-![Biểu đồ lớp]()
+![Biểu đồ lớp](https://www.planttext.com/api/plantuml/png/h59BJiGm3Dtd55d2WZa26aIHG89IJOS3U2OM4v5FPRk8274o5Xo9Az26je8EmsfMiP-Vd-ENVBv_B5c0fFLEyPCDcYAZsZfWrXKaYivT66-3PI6GIFfLQNscCtPJvBX2yfRPni3gJGszLxvnCI4E_34TMahm-0jVfmO7OKF8dEEwBlEvXfS2JRkLFA97xcM7DCEgNGnOjdw3bFFhs99BAv1luHeSKChXPVJ3XQTgJxwrtih-1dSGu14z1gaJ2_h90JCoJaupyj2OJcu65kXm3roXaCNd2Iv0e2jDe_jy0poQLtU-poMECUpFzrqipW-khWvwyhFhVzQucrfYCFsl-m800F__0m00)
 # 5. Phân tích ca sử dụng Maintain Purchase Order
 ## Các lớp phân tích
+- CommissionedEmployee: Đại diện cho nhân viên làm việc theo hoa hồng, người có quyền thêm, cập nhật hoặc xóa thông tin đơn hàng để nhận hoa hồng.
+- PurchaseOrder: Chứa thông tin về các đơn hàng bao gồm điểm liên hệ khách hàng, địa chỉ thanh toán, sản phẩm, ngày tạo và mã số đơn hàng duy nhất.
+- OrderManagementSystem: Quản lý các thao tác thêm, cập nhật và xóa đơn hàng.
+- Database: Lưu trữ và truy xuất thông tin đơn hàng, hỗ trợ các thao tác thêm, sửa và xóa dữ liệu đơn hàng.
 ## Sequence Diagram
-![Squence Diagram]()
+![Squence Diagram](https://www.planttext.com/api/plantuml/png/v9I_JiCm4CPtFyMf4mmLUmTK6WU9eGfg1FiHNwb5R0Vx0igpCV18l09sKb2RLch5IXOhkj_z-UvB_FNnEG-CdbjJY_2YBNWNI635paFcZD4XQ6T9vQQfNKS4623BHHDJTAKRj0oJmYloIxJuJ8OibrrWCfD45ijo7vN8-8I1-gXS297bCBrEt0nAggbYk6rjnR4dN6IUaEdgeL7fa37C1FUjhpQn0lHTBmNM30C8E0eAY4yidJfa-GnMzDfIu145TtRjlC7Kiy_O6Ict784HBubHrs6tkbpCu4QfCRcYoddLWt81qv-g8oecaXhFAdLeQkmEPfM2wlWsxEJFYkLPGhVOZiOLiTVqDdO1agsdP2Rcjy2Utfv-9A_N7HJlbdpOw0RGAYWPkGtdxMOiQRkY4sRlY3kUS9w7GwuQpDb-gV_JdCpPjVPcMCAHNselJeSQZ3jKS9u7GyNeWLMYBxcTg6Z8zuQd2wqPc7c4qfNt3G00__y30000)
 ## Một số thuộc tính và quan hệ giữa các lớp:
 ## Biểu đồ lớp
-![Biểu đồ lớp]()
+![Biểu đồ lớp](https://www.planttext.com/api/plantuml/png/h5BBJiD03BplL-mH3lGJK27XW0IqQWJt9JkqA_OHsKvHXFWo3dmIlq2oJK6H0YTkjcVi6Nlty_rZoM98sk0LFxkeAJ5KxGspBb88Zjcb27iL6fywGByghS_qCRqkStfd0jIR6llMBTKxmrYH1OqDEHxPHSkI0gX8KKmjkNRfl7TnUs4jWJcNrfHiMykDumEbD88SL6AavH-zFFlMHBD5G9IgOq4OTGj2tpPnT7AQaVl6_eAKy9X77a3kgLkzH13lNDDNlqtqxinZJnzrAqdqRx8R23difzWWU30m-qwBnVdyOTJykGR-PFuVlEEkQebeXv_p1G00__y30000)
 # 6. Phân tích ca sử dụng Run Payroll
 ## Các lớp phân tích
+- PayrollScheduler: Khởi động quy trình trả lương định kỳ vào thứ Sáu hàng tuần và ngày làm việc cuối tháng.
+- Employee: Đại diện cho nhân viên nhận lương, bao gồm thông tin như mức lương, phương thức thanh toán, và các khoản khấu trừ.
+- PayrollCalculator: Thực hiện tính toán lương dựa trên thông tin chấm công, đơn hàng, thông tin nhân viên và các khoản khấu trừ theo luật.
+- BankSystemIntegration: Hệ thống gửi yêu cầu giao dịch ngân hàng cho nhân viên nhận lương qua chuyển khoản.
+- PayrollPrinter: In phiếu lương cho các phương thức nhận qua thư hoặc nhận trực tiếp.
+- Database: Lưu trữ thông tin về nhân viên, bản chấm công, đơn hàng và trạng thái thanh toán.
 ## Sequence Diagram
-![Squence Diagram]()
+![Squence Diagram](https://www.planttext.com/api/plantuml/png/R5D1JiCm4Bpx5Ilk_K0E2AK1gH8L5k43YxEbLXmxMhj8VHi7diGNM9lMJO58YQBCxCpkhFFryNaN4t8wJ4x5qNhW44cXIO7XHkEHWtFGcpqD1qTy0nX1zsgM2cliZ3vLrXgTEJYKmX_M-fhLOS9NZ5J0hhq6M_HZVuo9ferFzCQORF25sVQRVzqqMs6UhBHIkeVLhPWsiF4sMKm4v-ur1qCnAhtEbAvju9aIMtedk7VspRuwUPbc5uv4KNKjh4vAZpOc2Bi5g5m8Cpn8DeHcNm45SlqdVyBXnKvaa8S8w0Tuue4ubgA5MoNdfAh6iD3Eh7FATRo2bmUwb3zE935jAUt3q41dcKo2ZkOGRIgqYvvaAu9CMIrl05uOVPJTI_YLAgJQuWA7TV0xonDMChb8V_otQ1r8NDgQyJ3_yjUwWRB7N2P7p8mNWgwcP-o7UWg4_70zU4rlYppI03inxSZHrIoN5HLeiQ1dCe4lqlakvoNtq3U_Zv8CBuMKcxaJQlvtlW400F__0m00)
 ## Một số thuộc tính và quan hệ giữa các lớp:
+
 ## Biểu đồ lớp
-![Biểu đồ lớp]()
+![Biểu đồ lớp](https://www.planttext.com/api/plantuml/png/T591JiCm4Bpx5Jx2WJu1LIKSSW1Lj1zOd8LQMTkLlK6A42_Zm9Fu0hPZGr2QMoOpixCU-_lpQniOF0-6HEYrbTu558eW1Bc7qJkYWpfXDn1w-Iwal94LPz1QpHeOY_RgMdo8OhytPt8ZOh5Ls3OPFeAP9aIdGSiFo2VNJG50uCVykKEBBvf31asCLQoT3NyX9VSEI0q4xEgIzSUbnNPW-yCO64rh6Lyzf9drS6Yxn1yzs00vRMujq_PUHsVDoYWoiHVLpzKDC3n3g0qy8NkDRrYRI7IKpwcZDgZ0TpEgGKB-zKpZ5pUpsTmkgn3BSfAkZbgXwz8hzCNoLhJ_snBRs6rwPpy0003__mC0)
 # 7 . Viết code Java mô phỏng ca sử dụng Maintain Timecard.
 
