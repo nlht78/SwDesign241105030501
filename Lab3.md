@@ -65,6 +65,6 @@ Giải Thích cho ProjectManagementDatabase
 | IProjectManagement    | External Interfaces::Project Management     |
 | ProjectManagementDatabase | External Interfaces::Project Management |
 
-4.	Architectural layers and their dependencies
+# 4.	Architectural layers and their dependencies
 
 ![](https://www.planttext.com/api/plantuml/png/V59BJiCm4Dtx55OFq1DKKMa1AL8hHIgxYiNW3i7O7aTZjrA4E1aBZiGLI9poIPfqPS_p-BtdD_xw-5o621oFpefWD4ds0KK5oa29SbOm1gG8KNkI6wYHPtAniEqco-IRa7A_yQMcUy_kiQsseEdELTRNYB_WWtQeW0-zhfkgibebvWv_5t-w_mudP0kesLkxzXJR5RcdD81tTOZerjOharD4VWQ5VS7LCMZ24EGE-QGLXcbPzOBA9DgVX_QfMeMIhtdFLq2cyvHu1cLUiAPuDfAG2w1fyQ-euXQeqNJDYCvz0_GM8Zn1w1oEJdC-pyRY5cCZIBrJIOdf3DEzorZ44kdGV3mflW400F__0m00)
