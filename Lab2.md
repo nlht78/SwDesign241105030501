@@ -36,17 +36,24 @@
 # 4. Phân tích ca sử dụng Maintain Employee Information
 ## Các lớp phân tích
 ## Sequence Diagram
+![Squence Diagram]()
+
 ## Một số thuộc tính và quan hệ giữa các lớp:
 ## Biểu đồ lớp
+![Biểu đồ lớp]()
 # 5. Phân tích ca sử dụng Maintain Purchase Order
 ## Các lớp phân tích
 ## Sequence Diagram
+![Squence Diagram]()
 ## Một số thuộc tính và quan hệ giữa các lớp:
 ## Biểu đồ lớp
+![Biểu đồ lớp]()
 # 6. Phân tích ca sử dụng Run Payroll
 ## Các lớp phân tích
 ## Sequence Diagram
+![Squence Diagram]()
 ## Một số thuộc tính và quan hệ giữa các lớp:
 ## Biểu đồ lớp
+![Biểu đồ lớp]()
 # 7 . Viết code Java mô phỏng ca sử dụng Maintain Timecard.
 
