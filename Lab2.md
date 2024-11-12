@@ -199,4 +199,115 @@
 ## Biểu đồ lớp
 ![Biểu đồ lớp](https://www.planttext.com/api/plantuml/png/T591JiCm4Bpx5Jx2WJu1LIKSSW1Lj1zOd8LQMTkLlK6A42_Zm9Fu0hPZGr2QMoOpixCU-_lpQniOF0-6HEYrbTu558eW1Bc7qJkYWpfXDn1w-Iwal94LPz1QpHeOY_RgMdo8OhytPt8ZOh5Ls3OPFeAP9aIdGSiFo2VNJG50uCVykKEBBvf31asCLQoT3NyX9VSEI0q4xEgIzSUbnNPW-yCO64rh6Lyzf9drS6Yxn1yzs00vRMujq_PUHsVDoYWoiHVLpzKDC3n3g0qy8NkDRrYRI7IKpwcZDgZ0TpEgGKB-zKpZ5pUpsTmkgn3BSfAkZbgXwz8hzCNoLhJ_snBRs6rwPpy0003__mC0)
 # 7 . Viết code Java mô phỏng ca sử dụng Maintain Timecard.
-
+    package maintaintimecard;
+  
+    //Lớp đại diện cho Nhân viên
+    class Employee {
+     private String employeeID;
+     private String name;
+    
+     public Employee(String employeeID, String name) {
+         this.employeeID = employeeID;
+         this.name = name;
+     }
+    
+     public String getEmployeeID() {
+         return employeeID;
+     }
+    
+     public String getName() {
+         return name;
+     }
+    }
+    
+    //Lớp đại diện cho Bản chấm công
+    class Timecard {
+     private String timecardID;
+     private String employeeID;
+     private String date;
+     private double hoursWorked;
+     private String projectID;
+    
+     public Timecard(String timecardID, String employeeID, String date, double hoursWorked, String projectID) {
+         this.timecardID = timecardID;
+         this.employeeID = employeeID;
+         this.date = date;
+         this.hoursWorked = hoursWorked;
+         this.projectID = projectID;
+     }
+    
+     public String getTimecardID() {
+         return timecardID;
+     }
+    
+     public String getEmployeeID() {
+         return employeeID;
+     }
+    
+     public String getDate() {
+         return date;
+     }
+    
+     public double getHoursWorked() {
+         return hoursWorked;
+     }
+    
+     public String getProjectID() {
+         return projectID;
+     }
+    }
+    
+    //Lớp đại diện cho Tích hợp Hệ thống Dự án
+    class ProjectSystemIntegration 
+    {
+     // Phương thức lấy thông tin dự án
+     public String retrieveProjectInfo(String projectID) 
+     {
+         //  mô phỏng việc lấy thông tin dự án.
+         // 
+         System.out.println("Đang lấy thông tin cho Mã dự án: " + projectID);
+         return "Thông tin Dự án cho " + projectID;
+     }
+    }
+    
+    //Lớp đại diện cho Cơ sở dữ liệu
+    class Database 
+    {
+     //  mô phỏng cho việc lưu trữ các bản ghi chấm công và dự án.
+     public void storeTimecard(Timecard timecard) 
+     {
+         System.out.println("Bản chấm công cho Mã nhân viên " + timecard.getEmployeeID() +
+                 " vào Ngày " + timecard.getDate() + " đã được lưu trong Cơ sở dữ liệu.");
+     }
+    }
+    
+    //Mô phỏng Ca sử dụng cho Quản lý Chấm công
+      public class MaintainTimecardSystem 
+      {
+      
+       public static void main(String[] args) 
+       
+       {
+         // Khởi tạo các thành phần hệ thống
+         Employee employee = new Employee("E001", "John Doe");
+         ProjectSystemIntegration projectSystem = new ProjectSystemIntegration();
+         Database database = new Database();
+    
+         // Mô phỏng nhân viên đăng nhập
+         System.out.println(employee.getName() + " đã đăng nhập thành công.");
+    
+         // Mô phỏng quy trình cập nhật chấm công
+         String projectID = "P1234";
+         String projectInfo = projectSystem.retrieveProjectInfo(projectID);
+    
+         // Tạo một bản ghi chấm công mới cho nhân viên
+         Timecard timecard = new Timecard("TC001", employee.getEmployeeID(), "2023-10-01", 8.0, projectID);
+    
+         // Lưu bản chấm công vào cơ sở dữ liệu
+         database.storeTimecard(timecard);
+    
+         // Thông báo cho nhân viên rằng cập nhật đã thành công
+         System.out.println("Bản chấm công cho " + employee.getName() + " đã được cập nhật thành công.");
+     }
+    }
+    
