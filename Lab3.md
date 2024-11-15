@@ -1,6 +1,21 @@
 # 1.	Subsystem context diagrams
 
 ## Biểu đồ ngữ cảnh 
+### BankSystem
+![Biểu đồ ngữ cảnh](https://www.planttext.com/api/plantuml/png/h591JiCm4BplArQvj4YaWciKHHKLXzuGVO59jgeLnuwyJaK4l8m3J-8BnAPkJNh5fz7Exipioj-VNsjsmhgXKy2jr6WD4opmIOpMA8KRevq7PA5MWZaIbpg-0OPd1tqYbpVm0PF8Wz0jxaPsrE5kUE60G6f7TYzgmgrlEF5HfQ7Ui7HBCMdL1wfRB332MvncJL0jWlXMxutjX9D6UylVX8beMNAqnTwQrx6g_iLeskrHE-b6t7XBuijnmdoI99dqOy-a0kQ3x1ckZvdThLRt6UPvXH6dLoemQwIbsiNu6FmOZr9aa7QMxtcUd0BEMvP_wxECSpgLzA7E6yw9grtNf1l_gtu0003__mC0)
+
+
+Giải Thích cho BankSystem
+
+- PayrollController: Thành phần điều phối việc gửi lệnh chuyển khoản cho nhân viên thông qua hệ thống ngân hàng.
+
+- IBankSystem: Interface của BankSystem, qua đó PayrollController gửi yêu cầu chuyển khoản.
+
+- BankSystem: Hệ thống con thực tế xử lý các giao dịch chuyển khoản trực tiếp vào tài khoản ngân hàng của nhân viên.
+
+- Paycheck: Đối tượng chứa thông tin về lương của nhân viên, được sử dụng để xác định số tiền cần chuyển khoản.
+
+- BankInformation: Đối tượng chứa thông tin tài khoản ngân hàng của nhân viên, cần thiết cho giao dịch chuyển khoản.
 ### PrintService
 ![Biểu đồ ngữ cảnh](https://www.planttext.com/api/plantuml/png/Z951JWCn34NtFeNLJSjYBb2DHfKg5kmGFK4OZ1erJQQs1n4LJiQYH-eL60-DXfODMLdVty_-oldhj19rhFq-WEnyH4v2CCT7bpc5WEiKrGfYQ8CJAOr9noFW-BYFb-RY3Zx18EoZueRupRU4c_vPiYZjOL29NzsWFOoMuYYapiH5vtAxfNQ7IriwbiQzdF5xhgwbi8VPz9wRvd-iuSRxg5upherACeKSFMPuek3KfoXRtmdyZLzLpKsC9SwO3Zs9_cp7idq6ryRwewgkajpq3JsTigBuOj_q3G00__y30000)
 
