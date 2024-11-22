@@ -16,7 +16,7 @@
 
 ## 3. Describe Persistence-Related Behavior
 ### Mô tả:
-- Database lưu trữ thông tin người dùng (tên đăng nhập và mật khẩu băm).
+- Database lưu trữ thông tin người dùng (tên đăng nhập và mật khẩu).
 - SecuritySubsystem xử lý xác thực, không lưu mật khẩu gốc.
 
 ![Biểu đồ lớp](https://www.planttext.com/api/plantuml/png/T9112i8m44NtESKi5Um5if0YBjmN3p1j1mscYMIIIX5Fvi8ZUGMJMYDOt0r__d_pa-VzKR97vqEd1P-K0MUPHAEH6VPC3gu2e80GHuCTIQYyK-OmYkTekbZNxf2FUN4JKxgY9ZZbXohKFB2dRaG1zAXLYvuMlynL1dwKfOIDjPhGVB5Rz5WZqqHp59tKK-ew8yPyqbDutgOerkyNobo9_zZoJPdliIZ9jEdNNW000F__0m00)
