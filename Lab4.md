@@ -2,7 +2,7 @@
 ## 1. Describe Interaction Among Design Objects
 
 ### Mô tả:
-- Người dùng nhập thông tin đăng nhập (tên và mật khẩu) vào form đăng nhập.
+- Người dùng nhập thông tin đăng nhập (tên đăng nhập và mật khẩu) vào form đăng nhập.
 - Hệ thống xác thực thông tin đăng nhập thông qua SecuritySubsystem.
 - Nếu thông tin hợp lệ, người dùng được cấp quyền truy cập vào hệ thống. Nếu không, thông báo lỗi được hiển thị.
 
