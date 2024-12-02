@@ -13,3 +13,19 @@
 ![](https://www.planttext.com/api/plantuml/png/Z99BReCm48Rtd6AK5PMg7C2BAchPT1D5pGa6CwGMneCy9XAgUh8kUgHUeHW10f9AzS8Qp-l_nlRFr_T10lhGrZQHoZZmB9Gqg2ky43oZgywT1AhX8m7G5aK6vmkxuDbQyaCWhiQp9f4JTZ6GDjZfTzALWjDeFIZ8cIsX6okkv4tPnNOP1JHMqhotNrt9QX29bgyn67QhsizanN8cVpMQjY0PDImct05vXF_f38neJO61thWDnbsERPsJJ_tof422xqz_CKwoCo3MtBgWeBICOVH53GLPlzyEkE2RUyG9ZbZJ93wrrZhsNeEDiRlGWrgljtdK_VvfTRSATgsGx9AbCoRDm_KP1JNa2W5sjtdREJRfXzwAN_0N003__mC0)
 
 # 2. PrintService
+## Xác định các operations
+
+## Xác định các trạng thái
+
+## Xác định các thuộc tính
+
+## Xác định các phụ thuộc, quan hệ kết hợp
+# 3. ProjectManagementDatabase
+
+## Xác định các operations
+
+## Xác định các trạng thái
+
+## Xác định các thuộc tính
+
+## Xác định các phụ thuộc, quan hệ kết hợp
